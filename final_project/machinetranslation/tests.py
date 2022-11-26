@@ -9,8 +9,8 @@
         self.assertNotEqual(english_to_french(0), 0)
         
   def test1(self):
-        self.assertEqual(french_to_english('Hello'), 'Bonjour')
-        self.assertNotEqual(french_to_english('Hello'), 'Hello')
+        self.assertEqual(french_to_english('Bonjour'), 'Hello')
+        self.assertNotEqual(french_to_english('Bonjour'), 'Bonjour')
         self.assertNotEqual(french_to_english("None"), '')
         self.assertNotEqual(french_to_english(0), 0)
 
