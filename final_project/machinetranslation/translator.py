@@ -1,7 +1,7 @@
-import json
+"""Instantiates language translator instance and defines translation functions"""
+import os
 from ibm_watson import LanguageTranslatorV3
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
-import os
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,11 +15,7 @@ language_translator = LanguageTranslatorV3(
     version='2018-05-01',
     authenticator=authenticator
 )
-
-
 language_translator.set_service_url('{url}')
-
-
 def english_to_french(text1):
     """This function translates English to French"""
     frenchtranslation=language_translator.translate(text=text1,model_id='en-fr').get_result()
